@@ -1,32 +1,37 @@
-
-
 #include <iostream>
 
 using namespace std;
 
 int main()
 {
-    int number1=0;
-    int number2=0;
-    int sum=0;
     int x=0;
     int y=0;
     int z=0;
+    int sum=0;
+    int average=0;
+    int product=0;
 
-    std::cout<<"Enter first integer:";
-    std::cin>>number1;
+    cout<<"Input three different integers:";
+    cin>>x>>y>>z;
 
-    std::cout<<"Enter second integer:";
-    std::cin>>number2;
+    sum=x+y+z;
+    cout<<"Sum is "<<sum<<endl;
+    average=(x+y+z)/3;
+    cout<<"Average is "<<average<<endl;
+    product=x*y*z;
+    cout<<"Product is "<<product<<endl;
 
-    sum=number1+number2;
-    x=number1*number2;
-    y=number1-number2;
-    z=number1/number2;
-    std::cout<<"The sum is "<<sum<<std::endl;
-    std::cout<<"The product is "<<x<<std::endl;
-    std::cout<<"The difference is "<<y<<std::endl;
-    std::cout<<"The quotient is "<<z<<std::endl;
+    if(x>z&&y>z)
+        cout<<"Smallest is "<<z<<endl;
+    if(x>y&&z>y)
+        cout<<"Smallest is "<<y<<endl;
+    if(y>x&&z>x)
+        cout<<"Smallest is "<<x<<endl;
+    if(x>y&&x>z)
+        cout<<"Largest is "<<x<<endl;
+    if(y>z&&y>x)
+        cout<<"Largest is "<<y<<endl;
+    if(z>x&&z>y)
+        cout<<"Largest is "<<z<<endl;
 
-    return 0;
 }
